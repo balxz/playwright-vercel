@@ -1,12 +1,12 @@
 import express from 'express';
-import { chromium } from 'playwright';
+import { chromium } from '@playwright/chromium';
 
 const app = express();
 app.use(express.json());
 
 app.get('/api/screenshot', async (req, res) => {
   const { url } = req.query;
-  if (!url) return res.status(400).send('Missing url query param');
+  if (!url) return res.status(400).send('Missing url');
 
   let browser;
   try {
