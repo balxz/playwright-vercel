@@ -1,5 +1,5 @@
 import express from 'express';
-import { chromium } from '@playwright/chromium';
+import { chromium } from 'playwright-chromium';
 
 const app = express();
 app.use(express.json());
